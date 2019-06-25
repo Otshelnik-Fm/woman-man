@@ -46,6 +46,12 @@
 
 
 == Changelog ==
+= 2019-06-25 =
+v1.0.1
+* Для wp-cron задачи можно применять <code>user_id = -1</code> - тогда функция <code>rcl_decline_by_sex()</code> вернет корректное значение по дефолту.
+(поддержка допа universe activity)
+
+
 = 2019-06-21 =
 v1.0
 * Release

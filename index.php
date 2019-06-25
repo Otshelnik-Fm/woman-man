@@ -86,6 +86,10 @@ function wmnm_add_form( $fields ) {
 // склоняем
 //$data = ['опубликовал','опубликовала']
 function rcl_decline_by_sex( $user_id, $data ) {
+    // wp-cron (universe activity)
+    if ( $user_id == '-1' )
+        return $data[0];
+
     $sex = get_user_meta( $user_id, 'rcl_sex', true );
 
     $out = $data[0];

@@ -1,6 +1,6 @@
 Name: Woman Man;
-Version: 1.0.1;
-Support Core: 16.17.0;
+Version: 1.1.0;
+Support Core: 16.24.11;
 Description: В личном кабинете дает возможность выбрать пол пользователя;
 Author: Владимир Дружаев (Otshelnik-Fm);
 Author URI: https://otshelnik-fm.ru/?utm_source=free-addons&utm_medium=addon-manager&utm_campaign=woman-man&utm_content=not-domain&utm_term=home-page;

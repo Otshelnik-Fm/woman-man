@@ -28,18 +28,19 @@ function wmnm_field_sex_profile( $fields ) {
 }
 
 // и немного обрежем там что не надо
-add_filter( 'rcl_custom_field_options', 'wmnm_exclude_variations', 10, 3 );
-function wmnm_exclude_variations( $options, $field, $post_type ) {
+add_filter( 'rcl_field_options', 'wmnm_exclude_variations', 10, 3 );
+function wmnm_exclude_variations( $options, $field, $manager_id ) {
     // это не страница "поля профиля"
-    if ( $post_type !== 'profile' )
+    if ( $manager_id !== 'profile' )
         return $options;
 
     // это не наше поле
-    if ( isset( $field['slug'] ) && ( $field['slug'] !== 'rcl_sex' ) )
+    if ( isset( $field->slug ) && ( $field->slug !== 'rcl_sex' ) )
         return $options;
 
     // что нам не нужно - удалим
     foreach ( $options as $option ) {
+
         // первое значение
         if ( $option['slug'] == 'empty-first' )
             continue;
